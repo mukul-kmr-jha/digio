@@ -6,13 +6,18 @@ import {LoginStepComponent} from "./components/login-step";
 import {AadhaarOTPStepComponent} from "./components/aadhaar-otp-step";
 
 export const RegistrationComponent = () => {
-    const { state, dispatch } = useContext(AppContext) as IStore;
-
+    const { state } = useContext(AppContext) as IStore;
+    console.log({state});
     return (
         <div className='registration-component'>
            <div className="content">
-               <AadhaarOTPStepComponent />
-               {/*<LoginStepComponent />*/}
+               {
+                   state.email ? (
+                       <AadhaarOTPStepComponent />
+                   ) : (
+                       <LoginStepComponent />
+                   )
+               }
            </div>
         </div>
     )

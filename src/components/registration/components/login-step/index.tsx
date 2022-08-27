@@ -4,6 +4,8 @@ import {IStore} from "../../../../interfaces/user-reducer.interface";
 import './index.scss';
 import {Header} from "../header";
 import {AadhaarForm} from "../aadhaar-form";
+import {regexEmail} from "../../../../constants/constant";
+import {UserAction} from "../../../../store/actions/user.action";
 
 export const LoginStepComponent = () => {
     const {state, dispatch} = useContext(AppContext) as IStore;
@@ -15,7 +17,17 @@ export const LoginStepComponent = () => {
     }
 
     const handleManualSignin = () => {
-        console.log('Manual Sign in');
+        // If the email entered is valid then only it can be continued
+        if (regexEmail.test(email)) {
+            dispatch({
+                type: UserAction.ADD_USER_PROPERTY,
+                payload: {
+                    email,
+                }
+            })
+        } else {
+            alert('Please enter a valid email id');
+        }
     }
 
     return (

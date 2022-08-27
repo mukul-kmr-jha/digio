@@ -5,11 +5,11 @@ import './index.scss';
 import {Header} from "../header";
 import {AadhaarForm} from "../aadhaar-form";
 import {VerificationStatus} from "../verification-status";
+import {UserAction} from "../../../../store/actions/user.action";
 
 export const AadhaarOTPStepComponent = () => {
     const {state, dispatch} = useContext(AppContext) as IStore;
 
-    const [email, setEmail] = useState(state.email);
     const [verificationDone, setVerificationDone] = useState(false);
 
     const handleGoogleOAuth = () => {
@@ -17,11 +17,21 @@ export const AadhaarOTPStepComponent = () => {
     }
 
     const handleManualSignin = () => {
-        console.log('Manual Sign in');
+        dispatch({
+            type: UserAction.ADD_AADHAAR_PROPERTY,
+            payload: {
+                isAgreed: false,
+                status: {
+                    loading: false,
+                    success: false,
+                    failure: false,
+                }
+            }
+        });
     }
 
     useEffect(() => {
-        setVerificationDone(state.aadhaar.status.loading && (state.aadhaar.status.success || state.aadhaar.status.failure));
+        setVerificationDone(!state.aadhaar.status.loading && (state.aadhaar.status.success || state.aadhaar.status.failure));
     }, [state.aadhaar.status.success, state.aadhaar.status.failure])
 
     return (

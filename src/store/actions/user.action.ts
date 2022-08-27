@@ -1,0 +1,4 @@
+export const UserAction = {
+    ADD_USER_PROPERTY: 'ADD_USER_PROPERTY',
+    ADD_AADHAAR_PROPERTY: 'ADD_AADHAAR_PROPERTY',
+}
