@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {useReducer} from "react";
+import {userInitialState, userReducer} from "./store/reducers/user-reducer";
+import {AppContext} from "./contexts/app.context";
+import {RegistrationComponent} from "./components/registration";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [state, dispatch] = useReducer(userReducer, userInitialState);
+
+    return (
+        <AppContext.Provider value={{state, dispatch}}>
+            <div className="App">
+                <RegistrationComponent />
+            </div>
+        </AppContext.Provider>
+    );
 }
 
 export default App;
