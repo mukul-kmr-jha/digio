@@ -1,0 +1,16 @@
+.verification-status {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  &-cont {
+    padding: 20px;
+    &.success {
+      background: #d9ead3;
+      border: 2px solid #69a84f;
+    }
+    &.failure {
+      background: #ead3d4;
+      border: 2px solid #a84f4f;
+    }
+  }
+}

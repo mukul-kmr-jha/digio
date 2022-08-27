@@ -7,7 +7,7 @@ export const userInitialState: IUserState = {
         isAgreed: false,
         status: {
             loading: false,
-            success: false,
+            success: true,
             failure: false,
         }
     }

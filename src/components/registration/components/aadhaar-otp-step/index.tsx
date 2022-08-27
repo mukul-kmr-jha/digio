@@ -1,14 +1,16 @@
-import {ChangeEventHandler, SetStateAction, useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {AppContext} from "../../../../contexts/app.context";
 import {IStore} from "../../../../interfaces/user-reducer.interface";
 import './index.scss';
 import {Header} from "../header";
 import {AadhaarForm} from "../aadhaar-form";
+import {VerificationStatus} from "../verification-status";
 
 export const AadhaarOTPStepComponent = () => {
     const {state, dispatch} = useContext(AppContext) as IStore;
 
     const [email, setEmail] = useState(state.email);
+    const [verificationDone, setVerificationDone] = useState(false);
 
     const handleGoogleOAuth = () => {
         console.log('Google OAuth');
@@ -18,6 +20,10 @@ export const AadhaarOTPStepComponent = () => {
         console.log('Manual Sign in');
     }
 
+    useEffect(() => {
+        setVerificationDone(state.aadhaar.status.loading && (state.aadhaar.status.success || state.aadhaar.status.failure));
+    }, [state.aadhaar.status.success, state.aadhaar.status.failure])
+
     return (
         <div className='aadhaar-otp-component'>
             <div className="container">
@@ -25,13 +31,19 @@ export const AadhaarOTPStepComponent = () => {
                 <div className='content'>
                     <div className='document'>
                         <img src="./document.png" alt="doc"/>
-                        <div className="document-btn">
-                            <button onClick={handleManualSignin}>Request OTP to Sign</button>
-                        </div>
+                        {
+                            !state.aadhaar.status.success && (
+                                <div className="document-btn">
+                                    <button onClick={handleManualSignin}>Request OTP to Sign</button>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>
-            <AadhaarForm/>
+            {
+                verificationDone ? <VerificationStatus/> : <AadhaarForm/>
+            }
         </div>
     )
 }
