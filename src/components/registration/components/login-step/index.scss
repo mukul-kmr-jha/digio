@@ -1,5 +1,5 @@
 .login-component {
-  .content {
+  .container {
     .header {
       height: 36px;
       padding: 0 8px;
@@ -22,6 +22,77 @@
         padding: 4px;
         img {
           height: 100%;
+        }
+      }
+    }
+    .content {
+      padding: 32px 12px;
+      text-align: center;
+      .oauth {
+        padding: 20px 40px;
+        &-btn {
+          button {
+            background: #d53333;
+            padding: 6px 20px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 12px;
+          }
+        }
+      }
+      .section-separator {
+        position: relative;
+        margin: 24px 0;
+        &:before {
+          position: absolute;
+          content: "";
+          background: #d3d3d3;
+          height: 2px;
+          top: 50%;
+          left: 0;
+          right: 0;
+        }
+        span {
+          position: relative;
+          background: white;
+          padding: 0 12px;
+        }
+      }
+      .manual {
+        padding: 20px 40px;
+        .input-box-cont {
+          display: flex;
+          flex-direction: column;
+          text-align: initial;
+          margin-bottom: 16px;
+          span {
+            margin-bottom: 4px;
+          }
+          input {
+            padding: 8px;
+            border: 1px solid #d0cbcb;
+            border-radius: 4px;
+          }
+        }
+        .terms {
+          font-size: 12px;
+          a {
+            color: #177bd8;
+            text-decoration: none;
+            padding-left: 4px;
+          }
+        }
+        &-btn {
+          button {
+            width: 100%;
+            border: none;
+            background: #177bd8;
+            margin-top: 8px;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px;
+          }
         }
       }
     }
