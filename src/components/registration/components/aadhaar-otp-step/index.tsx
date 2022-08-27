@@ -2,6 +2,7 @@ import {ChangeEventHandler, SetStateAction, useContext, useState} from "react";
 import {AppContext} from "../../../../contexts/app.context";
 import {IStore} from "../../../../interfaces/user-reducer.interface";
 import './index.scss';
+import {Header} from "../header";
 
 export const AadhaarOTPStepComponent = () => {
     const {state, dispatch} = useContext(AppContext) as IStore;
@@ -19,15 +20,7 @@ export const AadhaarOTPStepComponent = () => {
     return (
         <div className='aadhaar-otp-component'>
             <div className="container">
-                <div className='header'>
-                    <span className='header-label'>
-                        <span>Sign document using</span>
-                        <p>Sanket@digio.in</p>
-                    </span>
-                    <span className='img-cont'>
-                        <img src="./company-logo.png" alt="logo"/>
-                    </span>
-                </div>
+                <Header />
                 <div className='content'>
                     <div className='document'>
                         <img src="./document.png" alt="doc"/>
