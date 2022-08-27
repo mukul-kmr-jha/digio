@@ -1,8 +1,6 @@
 .header {
   height: 36px;
   padding: 0 8px;
-  display: flex;
-  justify-content: space-between;
   background: #177bd8;
   color: white;
   box-shadow: 0 0 9px 1px #bdbdbd;
@@ -18,8 +16,5 @@
     border: 2px solid #177bd8;
     border-top: none;
     padding: 4px;
-    img {
-      height: 100%;
-    }
   }
 }

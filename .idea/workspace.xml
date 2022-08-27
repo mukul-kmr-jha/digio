@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f21f235-4b93-4bee-b168-ea9e450517a7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/constants/constant.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/user.action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/aadhaar-form/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/aadhaar-form/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/components/aadhaar-form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/aadhaar-form/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/aadhaar-otp-step/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/aadhaar-otp-step/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/components/aadhaar-otp-step/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/aadhaar-otp-step/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/header/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/header/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/login-step/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/login-step/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/registration/components/login-step/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/login-step/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/registration/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/user-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/user-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/verification-status/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/verification-status/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/registration/components/verification-status/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/registration/components/verification-status/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661581498223</updated>
-      <workItem from="1661581499785" duration="14695000" />
+      <workItem from="1661581499785" duration="15585000" />
     </task>
     <servers />
   </component>

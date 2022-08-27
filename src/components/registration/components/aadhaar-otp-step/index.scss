@@ -1,22 +1,12 @@
 .aadhaar-otp-component {
-  position: relative;
   .container {
     .content {
       padding: 32px 12px;
       .document {
         padding: 0 20px;
-        img {
-          width: 100%;
-        }
         &-btn {
           button {
-            width: 100%;
-            border: none;
-            background: #177bd8;
             margin-top: 8px;
-            color: white;
-            text-transform: uppercase;
-            padding: 10px;
             font-weight: bolder;
           }
         }

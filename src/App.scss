@@ -4,6 +4,46 @@
   padding: 0;
 }
 
+.text-c {
+  text-align: center;
+}
+
+.d-flx {
+  display: flex;
+}
+
+.d-flx-col {
+  flex-direction: column;
+}
+
+.flx-1 {
+  flex: 1;
+}
+
+.j-cont-bet
+{
+  justify-content: space-between;
+}
+
+.j-cont-end {
+  justify-content: flex-end;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.w100 {
+  width: 100%
+}
+.h100 {
+  height: 100%;
+}
+
 .input {
   padding: 10px;
   border: 1px solid #d0cbcb;
@@ -17,7 +57,6 @@
   text-transform: uppercase;
   padding: 10px;
   &.red {
-
   }
   &:disabled {
     background: #d0cbcb;

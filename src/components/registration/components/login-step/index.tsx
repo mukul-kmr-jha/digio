@@ -1,9 +1,8 @@
-import {ChangeEventHandler, SetStateAction, useContext, useState} from "react";
+import {useContext, useState} from "react";
 import {AppContext} from "../../../../contexts/app.context";
 import {IStore} from "../../../../interfaces/user-reducer.interface";
 import './index.scss';
 import {Header} from "../header";
-import {AadhaarForm} from "../aadhaar-form";
 import {regexEmail} from "../../../../constants/constant";
 import {UserAction} from "../../../../store/actions/user.action";
 
@@ -31,10 +30,10 @@ export const LoginStepComponent = () => {
     }
 
     return (
-        <div className='login-component'>
+        <div className='login-component pos-rel'>
             <div className="container">
                 <Header />
-                <div className='content'>
+                <div className='content text-c'>
                     <div className='oauth'>
                        <span className='oauth-info-cont'>
                             <p>Sanket@digio.in you use Gmail?</p>
@@ -44,11 +43,11 @@ export const LoginStepComponent = () => {
                             <button onClick={handleGoogleOAuth}>Google</button>
                         </span>
                     </div>
-                    <div className='section-separator'>
-                        <span>OR</span>
+                    <div className='section-separator pos-rel'>
+                        <span className='pos-rel'>OR</span>
                     </div>
                     <div className='manual'>
-                        <div className='input-box-cont'>
+                        <div className='input-box-cont d-flx d-flx-col'>
                             <span>Proceed with your email address</span>
                             <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
@@ -57,7 +56,7 @@ export const LoginStepComponent = () => {
                             <a href="https://digio.in">Digio.in</a>
                         </div>
                         <div className="manual-btn">
-                            <button onClick={handleManualSignin}>continue</button>
+                            <button className='btn w100' onClick={handleManualSignin}>continue</button>
                         </div>
                     </div>
                 </div>

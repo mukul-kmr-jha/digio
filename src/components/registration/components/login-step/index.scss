@@ -1,9 +1,7 @@
 .login-component {
-  position: relative;
   .container {
     .content {
       padding: 32px 12px;
-      text-align: center;
       .oauth {
         padding: 20px 40px;
         &-btn {
@@ -18,7 +16,6 @@
         }
       }
       .section-separator {
-        position: relative;
         margin: 24px 0;
         &:before {
           position: absolute;
@@ -30,7 +27,6 @@
           right: 0;
         }
         span {
-          position: relative;
           background: white;
           padding: 0 12px;
         }
@@ -38,8 +34,6 @@
       .manual {
         padding: 20px 40px;
         .input-box-cont {
-          display: flex;
-          flex-direction: column;
           text-align: initial;
           margin-bottom: 16px;
           span {
@@ -61,13 +55,7 @@
         }
         &-btn {
           button {
-            width: 100%;
-            border: none;
-            background: #177bd8;
             margin-top: 8px;
-            color: white;
-            text-transform: uppercase;
-            padding: 10px;
           }
         }
       }

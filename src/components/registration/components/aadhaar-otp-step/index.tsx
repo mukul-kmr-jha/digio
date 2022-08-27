@@ -12,10 +12,6 @@ export const AadhaarOTPStepComponent = () => {
 
     const [verificationDone, setVerificationDone] = useState(false);
 
-    const handleGoogleOAuth = () => {
-        console.log('Google OAuth');
-    }
-
     const handleManualSignin = () => {
         dispatch({
             type: UserAction.ADD_AADHAAR_PROPERTY,
@@ -35,16 +31,16 @@ export const AadhaarOTPStepComponent = () => {
     }, [state.aadhaar.status.success, state.aadhaar.status.failure])
 
     return (
-        <div className='aadhaar-otp-component'>
+        <div className='aadhaar-otp-component pos-rel'>
             <div className="container">
                 <Header />
                 <div className='content'>
                     <div className='document'>
-                        <img src="./document.png" alt="doc"/>
+                        <img className='w100' src="./document.png" alt="doc"/>
                         {
                             !state.aadhaar.status.success && (
                                 <div className="document-btn">
-                                    <button onClick={handleManualSignin}>Request OTP to Sign</button>
+                                    <button className='btn w100' onClick={handleManualSignin}>Request OTP to Sign</button>
                                 </div>
                             )
                         }

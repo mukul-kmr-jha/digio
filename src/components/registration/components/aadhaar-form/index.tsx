@@ -53,7 +53,7 @@ export const AadhaarForm = () => {
                         }
                     }
                 });
-            })
+            }, 4000);
         } else {
             alert('Please enter a valid 12 digit aadhaar number');
         }
@@ -68,27 +68,27 @@ export const AadhaarForm = () => {
     }, [otp, agreed])
 
     return (
-        <div className='aadhaar-form'>
-            <div className='aadhaar-form-overlay'></div>
-            <div className='aadhaar-form-content'>
+        <div className='aadhaar-form pos-abs'>
+            <div className='aadhaar-form-overlay pos-abs w100 h100'></div>
+            <div className='aadhaar-form-content pos-rel'>
                 <div className='header-label'>
                     <h4>{loading ? 'Signing...' : 'Register Aadhaar'}</h4>
                     {loading && <p>Mutual Non-Disclosure Agreement</p>}
                 </div>
                 {
                     !loading && (
-                        <div className='form'>
-                            <span><img src="./aadhaar.png" alt=""/></span>
+                        <div className='form d-flx'>
+                            <span><img className='w100' src="./aadhaar.png" alt=""/></span>
                             <div>
-                                <div className='aadhaar-form-input'>
-                                    <input className='input' type="text" name="aadhaar" value={aadhaar} onChange={(e) => setAadhaar(e.target.value)}/>
+                                <div className='aadhaar-form-input d-flx'>
+                                    <input className='input flx-1' type="text" name="aadhaar" value={aadhaar} onChange={(e) => setAadhaar(e.target.value)}/>
                                     <button className='btn' disabled={!allowVerify} onClick={handleVerify}>Verify</button>
                                 </div>
-                                <div className="aadhaar-form-agree">
+                                <div className="aadhaar-form-agree d-flx">
                                     <input name='agreed' type="checkbox" checked={agreed} onChange={() => setAgreed(prev => !prev)}/>
                                     <label htmlFor='agreed'>I agree to eSign this <span>KYC Document</span> to get started</label>
                                 </div>
-                                <div className='aadhaar-otp-input'>
+                                <div className='aadhaar-otp-input d-flx j-cont-end'>
                                     <input className='input' type="text" name="aadhaar" value={otp} onChange={(e) => setOtp(e.target.value)}/>
                                     <button className='btn' disabled={!allowOtpSubmit} onClick={handleSubmit}>Submit</button>
                                 </div>
