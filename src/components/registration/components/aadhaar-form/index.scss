@@ -1,0 +1,69 @@
+.aadhaar-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #d5d5d5;
+  &-overlay {
+    position: absolute;
+    background: #5b5b5bc9;
+    width: 100%;
+    height: 100%;
+  }
+  &-content {
+    position: relative;
+    background: white;
+    .header-label {
+      padding: 8px 12px;
+      border-bottom: 1px solid #d5d5d5;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      p {
+        color: #177bd8;
+        font-weight: 500;
+      }
+    }
+    .form {
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      span {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+      .aadhaar-form-input {
+        display: flex;
+        gap: 4px;
+        .input {
+          flex: 1;
+        }
+        .btn {
+          font-weight: bolder;
+        }
+      }
+      .aadhaar-form-agree {
+        margin-top: 8px;
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        label span {
+          text-decoration: underline;
+        }
+      }
+      .aadhaar-otp-input {
+        display: flex;
+        justify-content: end;
+        gap: 8px;
+        margin-top: 12px;
+        .input {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}

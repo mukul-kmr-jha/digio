@@ -3,6 +3,7 @@ import {AppContext} from "../../../../contexts/app.context";
 import {IStore} from "../../../../interfaces/user-reducer.interface";
 import './index.scss';
 import {Header} from "../header";
+import {AadhaarForm} from "../aadhaar-form";
 
 export const AadhaarOTPStepComponent = () => {
     const {state, dispatch} = useContext(AppContext) as IStore;
@@ -30,6 +31,7 @@ export const AadhaarOTPStepComponent = () => {
                     </div>
                 </div>
             </div>
+            <AadhaarForm/>
         </div>
     )
 }

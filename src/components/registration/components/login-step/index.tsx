@@ -3,6 +3,7 @@ import {AppContext} from "../../../../contexts/app.context";
 import {IStore} from "../../../../interfaces/user-reducer.interface";
 import './index.scss';
 import {Header} from "../header";
+import {AadhaarForm} from "../aadhaar-form";
 
 export const LoginStepComponent = () => {
     const {state, dispatch} = useContext(AppContext) as IStore;
@@ -47,7 +48,6 @@ export const LoginStepComponent = () => {
                             <button onClick={handleManualSignin}>continue</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

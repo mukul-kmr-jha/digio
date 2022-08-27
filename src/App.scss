@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #d0cbcb;
+  border-radius: 0;
+}
+
+.btn {
+  border: none;
+  background: #177bd8;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  &.red {
+
+  }
+  &:disabled {
+    background: #d0cbcb;
+  }
+}

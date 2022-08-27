@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {useReducer} from "react";
 import {userInitialState, userReducer} from "./store/reducers/user-reducer";
 import {AppContext} from "./contexts/app.context";
